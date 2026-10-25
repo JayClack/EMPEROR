@@ -30,7 +30,6 @@ Later, a decryption system may be defined such that output files can be created 
 * Store the data appropriately for future decryption.
 
 ## Architectural Design
-
 ### Architecture Diagram
 
 ### Component Breakdown
