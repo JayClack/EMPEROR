@@ -37,3 +37,11 @@ class omm:
     bstar: float
     mean_motion_dot: float
     mean_motion_ddot: float
+
+
+@dataclass
+class Satellite:
+    norad_cat: int
+    object_name: str
+    object_id: str
+    classification: str
