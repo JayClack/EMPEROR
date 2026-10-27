@@ -1,3 +1,0 @@
-"""
-Celestrak API implementation.
-"""
