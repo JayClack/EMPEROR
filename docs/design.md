@@ -30,13 +30,8 @@ Later, a decryption system may be defined such that output files can be created 
 * Store the data appropriately for future decryption.
 
 ## Architectural Design
-### Architecture Diagram
-
-### Component Breakdown
-
-### Technology Stack
-
 ### Data and Control Flow
+The groundstation will be the primary driver of the process. Here will be defined the daily tasks, and also the daemon functions.
 
 ## Detailed Design
 
