@@ -4,7 +4,7 @@ Interface for the Celestrak API
 
 import requests
 import time
-from ..parsers.omm_parser import from_celestrak
+from ..parsers import from_celestrak
 
 class Celestrak:
     BASE_URL = "https://celestrak.org/NORAD/elements/gp.php"

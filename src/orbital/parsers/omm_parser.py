@@ -1,5 +1,5 @@
 from datetime import datetime
-from ..models.omm import OMM
+from ..models import OMM
 
 def from_celestrak(dict):
     return OMM(
