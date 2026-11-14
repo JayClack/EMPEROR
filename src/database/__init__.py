@@ -1,4 +1,4 @@
-from .satellite_record import Database
+from .database import Database
 
 __all__ = [
     "Database"
