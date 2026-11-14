@@ -23,5 +23,11 @@ class Database():
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        if self.conn is not None:
-            self.conn.close()
+        if self.conn is None:
+            raise RuntimeError("self.conn undefined, exiting.")
+        
+        if exc_type is None:
+            self.conn.commit()
+        else:
+            self.conn.rollback()
+        self.conn.close()
