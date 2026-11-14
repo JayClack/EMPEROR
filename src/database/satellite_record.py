@@ -14,6 +14,14 @@ class Database():
 
         self.conn = self.setup_database()
 
+    def __enter__(self): 
+        self.conn = self.setup_database()
+
+        return self.conn
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self.conn.close()
+
     def _location_exists(self, path):
         print(f"Checking path: {path}")
         path_exists = os.path.exists(path)

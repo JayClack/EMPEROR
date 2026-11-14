@@ -19,6 +19,5 @@ print(iss_omm_test)
 """
 
 if __name__ == "__main__":
-    testDB = Database(DATA_DIR, "345.db")
-
-    print(testDB.conn)
+    with Database(DATA_DIR, "345.db") as testDB:
+        print(testDB)
