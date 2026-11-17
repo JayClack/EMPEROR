@@ -1,5 +1,5 @@
-from ..orbital import Celestrak
-from ..database import Database
+from orbital import Celestrak
+from database import Database
 
 from pathlib import Path
 

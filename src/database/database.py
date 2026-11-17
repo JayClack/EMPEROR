@@ -1,7 +1,7 @@
 import sqlite3
 from pathlib import Path
 
-class Database():
+class Database:
     def __init__(self, db_location, db_name):
         self.db_location = Path(db_location)
         self.conn = None
