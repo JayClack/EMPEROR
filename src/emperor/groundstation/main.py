@@ -1,5 +1,5 @@
-from orbital import Celestrak
-from database import Database
+from emperor.orbital import Celestrak
+from emperor.database import Database
 from pathlib import Path
 
 DATA_DIR = Path(__file__).parent / "data"

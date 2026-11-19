@@ -1,0 +1,16 @@
+__pycache__/
+.venv/
+venv/
+*.py[cod]
+
+### Application Data ###
+src/emperor/groundstation/data
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+/out/
+.DS_Store
+src/.DS_Store

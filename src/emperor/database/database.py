@@ -40,14 +40,12 @@ class Database:
     def _ensure_configuration(self):
         print("Ensuring configuration table exists.")
 
-        self._conn.execute(
-            """
+        self._conn.execute("""
                 CREATE TABLE IF NOT EXISTS configuration(
                     id INTEGER PRIMARY KEY CHECK(id=1),
                     schema_version INTEGER NOT NULL DEFAULT 0
                 )
-            """
-        )
+            """)
 
         schema_version = self._get_schema_version()
         print(f"Schema version: {schema_version}")
@@ -80,8 +78,7 @@ class Database:
     def _get_schema_version(self):
         cursor = self._conn.cursor()
         cursor.execute(
-            """SELECT schema_version
-               FROM configuration"""
+            """SELECT schema_version FROM configuration"""
         )
 
         schema_version = cursor.fetchone()
