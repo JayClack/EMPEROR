@@ -1,4 +1,4 @@
-from .omm_parser import from_celestrak
+from .omm_creator import from_celestrak
 
 __all__ = [
     "from_celestrak"
