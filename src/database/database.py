@@ -50,10 +50,11 @@ class Database:
         )
 
         schema_version = self._get_schema_version()
+        print(f"Schema version: {schema_version}")
 
-        if not schema_version:
+        if not schema_version and schema_version != 0:
             print("Inserting initial schema value.")
-            self._conn.execute(
+            self._execute(
                 """INSERT INTO CONFIGURATION (id, schema_version) VALUES (1, 0)"""
             )
 
@@ -90,7 +91,10 @@ class Database:
         return schema_version[0]
 
     def _execute(self, sql: str, params: tuple = ()) -> sqlite3.Cursor:
-        return self._conn.execute(sql, params)
+        cursor = self._conn.cursor()
+        cursor.execute(sql, params)
+
+        return cursor
 
     def commit(self):
         self._conn.commit()
