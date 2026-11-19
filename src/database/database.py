@@ -38,7 +38,7 @@ class Database:
         self.close()
 
     def _ensure_configuration(self):
-        print("Creating configuration table.")
+        print("Ensuring configuration table exists.")
 
         self._conn.execute(
             """
